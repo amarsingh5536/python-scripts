@@ -1,0 +1,7 @@
+Steps to find python project vulnerabilities using snyk :
+1 clone python project repo.
+2 cd project repo / requirments.txt 
+3 sudo npm install -g snyk
+4 snyk auth
+5 pip3 install -r requirments.txt or install indiviual pip3 install package-name
+6 snyk monitor --command=python3
