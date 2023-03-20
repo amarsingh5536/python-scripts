@@ -1,0 +1,14 @@
+Steps to find git leaks
+
+Tool : gitleak
+https://github.com/zricethezav/gitleaks
+
+Step 1. Pull the gitleaks docker image from dockerhub:
+
+	docker pull zricethezav/gitleaks:latest 
+
+Step 2. Find the git leaks of git repo by run docker gitleaks image.
+
+    docker run -v ${path_to_host_folder_to_scan}:/path zricethezav/gitleaks:latest [COMMAND] --source="/path" [OPTIONS]
+
+	Example:  sudo docker run -v /home/heaven/professionals/zap/tms/api_gateway/:/path zricethezav/gitleaks:latest detect version -v --source="/path" >> express.log
